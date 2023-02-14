@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Maughan">
+    <meta name="description" content="Pay Calculator">
+    <title>Pay Calculator</title>
+</head>
+<body>
+
+    <h1>Pay Calculator</h1>
+
+    <script>
+
+        var rate = prompt("Enter your hourly rate")
+
+        var hours = prompt("Enter hours worked in the last 2 weeks")
+
+        var grossPay = rate * hours
+
+        console.log(`Gross Pay: $${grossPay.toFixed(2)}`)
+
+        var taxes = grossPay * .2
+
+        console.log(`Uncle Sam's Share: $${taxes.toFixed(2)}`)
+
+        var netPay = grossPay - taxes
+
+        console.log(`Net Pay: $${netPay.toFixed(2)}`)
+
+        alert(`Gross Pay: $${grossPay.toFixed(2)} \n Uncle Sam's Share: $${taxes.toFixed(2)} \n Net Pay: $${netPay.toFixed(2)}`)
+
+    </script>
+    
+</body>
+</html>
