@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 JS Demo</title>
+</head>
+<body>
+    <h1>W8 Javascript Demo | Arrays & Objects</h1>
+
+    <div id="output">
+
+    </div>
+
+    <script>
+        
+        var people = [
+            'Katie',    //people[0]
+            'Jay',      //people[1]
+            'Spencer',  //people[2]
+            'Luigi',    //people[3]
+            'Dan'       //people[4]
+        ]
+
+        console.log(people)
+        console.log(people[0])
+
+        var firstName = people[0]
+
+        console.log(firstName)
+
+        people[5] = `Sebastion`
+
+        console.log(people)
+
+        people.push(`Ryan`)
+
+        console.log(people)
+
+        people.push(prompt(`Enter Your Name:`))
+
+        console.log(people)
+
+        var color = [`grey`, `black`, `white`, `yellow`, `blue`,`red`,`purple`, `orange`, `green`]
+
+        var htmlClass = []
+
+        var indexArray = []
+
+        for(let index = 0; index < people.length; index++)
+        {
+            console.log(`INDEX: ${index}: ${people[index]}'s fave color is ${color[index]}`)
+        }
+
+        var associativePeople = []
+        associativePeople[`first`] = `James`
+        associativePeople[`last`] = `Maughan`
+        associativePeople[`cat`] = `Bartok`
+
+        console.log(associativePeople[`cat`])
+
+        var person1 = {
+            first: `James`,
+            last: `Maughan`,
+            hasPets: true,
+            height: 74,
+            pets:{
+                cats: [`Bee`, `Puss`, `Mayham`, `Jafar`, `Bartok`, `Freddy`, `Scraps`, `Mochi`],
+                birds: [`Kiwi`,`Fawks`]
+            },
+            greeting: function() {
+                    alert(`Hi there ${this.first} ${this.last}!`)
+                }
+        }
+
+        console.log(person1)
+
+        console.log(person1.height)
+
+        console.log(person1.pets)
+
+        console.log(person1.pets.cats)
+
+        console.log(person1.pets.cats[4])
+
+        console.log(person1.greeting())
+
+    </script>
+    
+</body>
+</html>
