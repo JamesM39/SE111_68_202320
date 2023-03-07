@@ -27,7 +27,7 @@
 			</tr>
 		</table>
 	<div>
-	<div id="output">
+	<div id="outputDiv">
 	
 	</div>
 
@@ -43,11 +43,11 @@
 
 		//Make an array to store the people
 
-		var [people] = 
+		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
 
-		document.querySelector('#submit').addEventListener(`click`, calcAndDisplay)
+		document.querySelector(`#submit`).addEventListener(`click`, calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -73,8 +73,8 @@
 
             var person = {
 
-				first: `${fname}`,
-				last: `${lname}`
+				first: fname.value,
+				last: lname.value
 
             }//end of person object
 
@@ -105,8 +105,9 @@
 			var output = ``
 
 			//Loop through the objects in the people array
-			for(let index = 0; index < people.length; index++)
+			for(let i = 0; i < people.length; i++)
             {
+
 
 				//Loop through each property in the object
 				for(key in people[i])
@@ -115,20 +116,23 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
+
+					output += `<p> <b> ${key.toUpperCase()}: </b> ${people[i][key]} <p> <br>`
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
 				
-
+				output += `<hr>`
 
 			}//end of loop going through people array to edit 'output'
 
-				//log the output string
-				//replace the outputDiv's inner HTML with the output string
+			//log the output string
+			//replace the outputDiv's inner HTML with the output string
 				
+			outputDiv.innerHTML = output
 
-
+			console.log(output)
 
 		}
 	
